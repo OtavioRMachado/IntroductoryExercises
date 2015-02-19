@@ -45,4 +45,14 @@ public class TriangleTest {
     public void should_draw_right_triangle_with_two_lines() {
         assertEquals("*\n**", t.PrintRightTriangle(2));
     }
+
+    @Test
+    public void should_draw_empty_triangle() {
+        assertEquals("", t.PrintTriangle(0));
+    }
+
+    @Test
+    public void should_print_a_one_line_triangle() {
+        assertEquals("*", t.PrintTriangle(1));
+    }
 }

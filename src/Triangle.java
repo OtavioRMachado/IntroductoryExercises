@@ -40,4 +40,8 @@ public class Triangle {
         }
         return result;
     }
+
+    public String PrintTriangle(int lines) {
+        return PrintHLine(lines);
+    }
 }
