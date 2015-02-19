@@ -26,4 +26,18 @@ public class Triangle {
     public String PrintVLine(int elements_in_line) {
         return CreateLine(elements_in_line, true);
     }
+
+    public String PrintRightTriangle(int lines) {
+       int elements_in_line = 1;
+        int last_line = lines - 1;
+        String result = "";
+        for(int i = 0; i < lines; i++) {
+            result += CreateLine(elements_in_line, false);
+            elements_in_line++;
+            if(i < last_line) {
+                result += "\n";
+            }
+        }
+        return result;
+    }
 }

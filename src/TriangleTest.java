@@ -30,4 +30,19 @@ public class TriangleTest {
     public void should_draw_one_vertical_line_with_two_asterisks() {
         assertEquals("*\n*", t.PrintVLine(2));
     }
+
+    @Test
+    public void should_draw_right_triangle_with_no_lines() {
+        assertEquals("", t.PrintRightTriangle(0));
+    }
+
+    @Test
+    public void should_draw_right_triangle_with_one_line() {
+        assertEquals("*", t.PrintRightTriangle(1));
+    }
+
+    @Test
+    public void should_draw_right_triangle_with_two_lines() {
+        assertEquals("*\n**", t.PrintRightTriangle(2));
+    }
 }
