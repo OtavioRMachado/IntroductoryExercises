@@ -5,6 +5,6 @@ public class Triangle {
     public Triangle() {
     }
     public String Print() {
-        return null;
+        return "*";
     }
 }
