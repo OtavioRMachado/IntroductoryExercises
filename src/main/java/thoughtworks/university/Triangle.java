@@ -16,8 +16,8 @@ public class Triangle {
 
     protected String createLine(int elementsInLine, boolean isVertical) {
         String result = "";
-        for(int i = 0; i < elementsInLine; i++) {
-            if(isVertical && i > 0) {
+        for (int i = 0; i < elementsInLine; i++) {
+            if (isVertical && i > 0) {
                 result += "\n";
             }
            result += getCharAsStr();
@@ -44,7 +44,7 @@ public class Triangle {
         int emptySpaces;
         int howManyElementsShouldIAdd;
 
-        if(isHalfTriangle) {
+        if (isHalfTriangle) {
             emptySpaces = 0;
             howManyElementsShouldIAdd = 1;
         } else {
@@ -52,8 +52,8 @@ public class Triangle {
             howManyElementsShouldIAdd = 2;
         }
 
-        for(int i = 0; i < lines; i++) {
-            if(i > 0) {
+        for (int i = 0; i < lines; i++) {
+            if (i > 0) {
                 result += "\n";
             }
 
@@ -72,7 +72,7 @@ public class Triangle {
     }
 
     private String getSpaces(int emptySpaces) {
-        if(emptySpaces > 0) {
+        if (emptySpaces > 0) {
             return " " + getSpaces(emptySpaces - 1);
         } else {
             return "";

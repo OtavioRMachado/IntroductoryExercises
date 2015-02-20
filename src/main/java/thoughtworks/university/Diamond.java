@@ -6,12 +6,12 @@ import java.util.List;
 public class Diamond extends Triangle {
 
     public Diamond(char characterDiamondsAreMadeOf) {
-        super(characterDiamondsAreMadeOf);
+        super (characterDiamondsAreMadeOf);
     }
 
     public String StandardDiamond(int size) {
         String result = printTriangle(size);
-        if(size <= 1) {
+        if (size <= 1) {
             return result;
         }
         result += "\n";
@@ -24,7 +24,7 @@ public class Diamond extends Triangle {
         String result = "";
         for (int i = linesList.size() - 2; i >= 0; i--) {
             result += linesList.get(i);
-            if(i > 0) {
+            if (i > 0) {
                 result += "\n";
             }
         }
@@ -40,10 +40,10 @@ public class Diamond extends Triangle {
     }
 
     private String shouldAddName(int size, String name) {
-        if(size <= 0) {
+        if (size <= 0) {
             return "";
         }
-        else if(size <= 1) {
+        else if (size <= 1) {
             return name;
         }
         return name + "\n";
