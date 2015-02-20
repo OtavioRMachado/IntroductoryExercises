@@ -55,4 +55,14 @@ public class TriangleTest {
     public void should_print_a_one_line_triangle() {
         assertEquals("*", t.PrintTriangle(1));
     }
+
+    @Test
+    public void should_print_a_two_line_triangle() {
+        assertEquals(" *\n***", t.PrintTriangle(2));
+    }
+
+    @Test
+    public void should_print_a_five_line_triangle() {
+        assertEquals("    *\n   ***\n  *****\n *******\n*********", t.PrintTriangle(5));
+    }
 }
