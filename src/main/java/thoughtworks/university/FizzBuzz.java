@@ -7,24 +7,23 @@ public class FizzBuzz {
     public void print() {
         String result;
         for (int i = 1; i < 100; i++) {
-            result = String.valueOf(i);
-            if (!isFizzOrBuzz(i)) {
-                System.out.print(result);
-            }
+            result = isFizzOrBuzz(i);
+            System.out.println(result);
             System.out.print("\n");
         }
     }
 
-    private boolean isFizzOrBuzz(int value) {
+    public String isFizzOrBuzz(int value) {
         boolean hasWritten = false;
+        String whatToWrite = "";
         if (value % 3 == 0) {
-            System.out.print("Fizz");
+            whatToWrite += "Fizz";
             hasWritten = true;
         }
         if (value % 5 == 0) {
-            System.out.print("Buzz");
+            whatToWrite += "Buzz";
             hasWritten = true;
         }
-        return hasWritten;
+        return whatToWrite == ""? String.valueOf(value) : whatToWrite;
     }
 }
