@@ -1,4 +1,4 @@
-package thoughtworks.university;
+package com.thoughtworks.university;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package thoughtworks.university;
+package com.thoughtworks.university;
 
 /**
  * Created by omachado on 2/20/15.

@@ -1,4 +1,4 @@
-package thoughtworks.university;
+package com.thoughtworks.university;
 
 import org.junit.Before;
 import org.junit.Test;

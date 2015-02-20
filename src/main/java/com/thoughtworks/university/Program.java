@@ -1,6 +1,4 @@
-package thoughtworks.university;
-
-import java.util.List;
+package com.thoughtworks.university;
 
 public class Program {
     public static void main(String[] args) {

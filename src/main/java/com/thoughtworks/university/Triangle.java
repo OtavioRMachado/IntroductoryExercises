@@ -1,4 +1,4 @@
-package thoughtworks.university;
+package com.thoughtworks.university;
 
 public class Triangle {
     protected char triangleCharacter;
