@@ -8,7 +8,7 @@ public class TriangleTest {
     private Triangle t;
     @Before
     public void setup() {
-        t = new Triangle();
+        t = new Triangle('*');
     }
 
     @Test
