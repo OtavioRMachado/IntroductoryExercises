@@ -1,6 +1,5 @@
-package test.thoughtworks.university;
+package thoughtworks.university;
 
-import main.thoughtworks.university.Triangle;
 import org.junit.Before;
 import org.junit.Test;
 

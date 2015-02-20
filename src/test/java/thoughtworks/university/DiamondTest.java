@@ -1,11 +1,8 @@
-package test.thoughtworks.university;
+package thoughtworks.university;
 
-import main.thoughtworks.university.Diamond;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class DiamondTest {
     private Diamond d;
@@ -33,5 +30,20 @@ public class DiamondTest {
     @Test
     public void shouldReturnSizeThreeDiamond() {
         Assert.assertEquals("  *\n ***\n*****\n ***\n  *", d.StandardDiamond(3));
+    }
+
+    @Test
+    public void shouldReturnSizeOneDiamondWithName() {
+        Assert.assertEquals("oi", d.namedDiamond(1, "oi"));
+    }
+
+    @Test
+    public void shouldReturnSizeZeroDiamondWithName() {
+        Assert.assertEquals("", d.namedDiamond(0, "oi"));
+    }
+
+    @Test
+    public void shouldReturnSizeTwoDiamondWithName() {
+        Assert.assertEquals(" *\noi\n *", d.namedDiamond(2, "oi"));
     }
 }
