@@ -24,4 +24,14 @@ public class DiamondTest {
     public void Should_return_size_one_diamond() {
         assertEquals("*", d.StandardDiamond(1));
     }
+
+    @Test
+    public void Should_return_size_two_diamond() {
+        assertEquals(" *\n***\n *", d.StandardDiamond(2));
+    }
+
+    @Test
+    public void Should_return_size_three_diamond() {
+        assertEquals("  *\n ***\n*****\n ***\n  *", d.StandardDiamond(3));
+    }
 }
