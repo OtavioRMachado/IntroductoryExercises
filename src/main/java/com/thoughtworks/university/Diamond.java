@@ -10,33 +10,33 @@ public class Diamond extends Triangle {
     }
 
     public String StandardDiamond(int size) {
-        String result = printTriangle(size);
+        StringBuffer result = new StringBuffer(printTriangle(size));
         if (size <= 1) {
-            return result;
+            return result.toString();
         }
-        result += "\n";
-        result += getReverseLines(result);
-        return result;
+        result.append("\n");
+        result.append(getReverseLines(result.toString()));
+        return result.toString();
     }
 
     protected String getReverseLines(String lines) {
         List<String> linesList = Arrays.asList(lines.split("\n"));
-        String result = "";
+        StringBuffer result = new StringBuffer();
         for (int i = linesList.size() - 2; i >= 0; i--) {
-            result += linesList.get(i);
+            result.append(linesList.get(i));
             if (i > 0) {
-                result += "\n";
+                result.append("\n");
             }
         }
-        return result;
+        return result.toString();
     }
 
     public String namedDiamond(int size, String name) {
-        String result = printTriangle(size);
-        result = ignoreLastLine(result);
-        result += shouldAddName(size, name);
-        result += getReverseLines(result);
-        return result;
+        StringBuilder result;
+        result = new StringBuilder(ignoreLastLine(printTriangle(size)));
+        result.append(shouldAddName(size, name));
+        result.append(getReverseLines(result.toString()));
+        return result.toString();
     }
 
     private String shouldAddName(int size, String name) {
@@ -51,10 +51,11 @@ public class Diamond extends Triangle {
 
     private String ignoreLastLine(String text) {
         List<String> linesList = Arrays.asList(text.split("\n"));
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
         for (int i=0; i < linesList.size() - 1; i++) {
-            result += linesList.get(i) + "\n";
+            result.append(linesList.get(i)).append("\n");
         }
-        return result;
+        return result.toString();
     }
 }

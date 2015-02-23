@@ -1,29 +1,22 @@
 package com.thoughtworks.university;
 
-/**
- * Created by omachado on 2/20/15.
- */
 public class FizzBuzz {
-    public void print() {
+    public void print(int start_value, int end_value) {
         String result;
-        for (int i = 1; i < 100; i++) {
+        for (int i = start_value; i < end_value; i++) {
             result = isFizzOrBuzz(i);
             System.out.println(result);
-            System.out.print("\n");
         }
     }
 
     public String isFizzOrBuzz(int value) {
-        boolean hasWritten = false;
-        String whatToWrite = "";
+        StringBuilder whatToWrite = new StringBuilder();
         if (value % 3 == 0) {
-            whatToWrite += "Fizz";
-            hasWritten = true;
+            whatToWrite.append("Fizz");
         }
         if (value % 5 == 0) {
-            whatToWrite += "Buzz";
-            hasWritten = true;
+            whatToWrite.append("Buzz");
         }
-        return whatToWrite == ""? String.valueOf(value) : whatToWrite;
+        return whatToWrite.length() == 0? String.valueOf(value) : whatToWrite.toString();
     }
 }

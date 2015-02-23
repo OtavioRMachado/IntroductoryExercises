@@ -32,6 +32,12 @@ public class PrimeFactorsTest {
     }
 
     @Test
+    public void shouldReturnAListWithA5AndA7() {
+        result.add(5);
+        result.add(7);
+        assertEquals(result, PrimeFactors.generate(35));
+    }
+    @Test
     public void shouldReturnOneMoreEmptyList() {
         assertEquals(result, PrimeFactors.generate(0));
     }

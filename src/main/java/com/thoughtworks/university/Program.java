@@ -7,7 +7,7 @@ public class Program {
         return;*/
 
         FizzBuzz myFizzBuzz = new FizzBuzz();
-        myFizzBuzz.print();
+        myFizzBuzz.print(1, 100);
 
         /*List<Integer> myPrimeList;
         myPrimeList = PrimeFactors.generate(10);

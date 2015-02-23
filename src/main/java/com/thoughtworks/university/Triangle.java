@@ -15,14 +15,14 @@ public class Triangle {
     }
 
     protected String createLine(int elementsInLine, boolean isVertical) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < elementsInLine; i++) {
             if (isVertical && i > 0) {
-                result += "\n";
+                result.append("\n");
             }
-           result += getCharAsStr();
+           result.append(getCharAsStr());
         }
-        return result;
+        return result.toString();
     }
     public String printHLine(int elementsInLine) {
         return createLine(elementsInLine, false);
@@ -39,7 +39,7 @@ public class Triangle {
     }
 
     protected String generateTriangle(int lines, boolean isHalfTriangle) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int elementsInLine = 1;
         int emptySpaces;
         int howManyElementsShouldIAdd;
@@ -54,16 +54,16 @@ public class Triangle {
 
         for (int i = 0; i < lines; i++) {
             if (i > 0) {
-                result += "\n";
+                result.append("\n");
             }
 
-            result += getSpaces(emptySpaces);
-            result += printHLine(elementsInLine);
+            result.append(getSpaces(emptySpaces));
+            result.append(printHLine(elementsInLine));
 
             elementsInLine += howManyElementsShouldIAdd;
             emptySpaces--;
         }
-        return result;
+        return result.toString();
     }
 
     public String printTriangle(int lines) {
@@ -72,8 +72,9 @@ public class Triangle {
     }
 
     private String getSpaces(int emptySpaces) {
+        StringBuilder result = new StringBuilder(" ");
         if (emptySpaces > 0) {
-            return " " + getSpaces(emptySpaces - 1);
+            return result.append(getSpaces(emptySpaces - 1)).toString();
         } else {
             return "";
         }
